@@ -8,18 +8,11 @@
 
 - **Target**: Defines the domain-specific interface that the client uses.
 - **Client**: Collaborates with objects using the target interface.
-- **Adaptee**: The existing class with an incompatible interface that needs adapting.
-- **Adapter**: Implements the target interface and translates requests to the adaptee.
+- **Adaptee**: The existing class with an incompatible interface that needs to be adapted.
+- **Adapter**: Implements the target interface and translates requests from the client to the adaptee.
 
-## Pros & Cons
+## Considerations
 
-### Pros
-
-- **Reusability**: Allows existing classes to be used without modification.
-- **Flexibility**: Clients can work with different implementations through the same interface.
-- **Separation of Concerns**: Keeps client code decoupled from the adaptee’s interface.
-
-### Cons
-
-- **Extra layer**: Adds additional abstraction, which can increase complexity.
-- **Overhead**: Slight performance cost for translation of calls.
+- Encapsulates conversion logic, keeping client code decoupled from the adaptee.
+- Supports integration of legacy or third-party code without modification.
+- May increase complexity linearly with the number of adapters.
