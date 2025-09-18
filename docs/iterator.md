@@ -4,7 +4,7 @@
 
 ## Structure
 
-![Iterator Pattern](images/iterator.png)
+![Iterator pattern](figures/iterator.png)
 - **Iterator**: Defines an interface for accessing and traversing elements of an aggregate object.
 - **ConcreteIterator**: Implements the iterator interface and provides a way to access the elements of an aggregate object.
 - **Aggregate**: Defines an interface for creating an iterator object.
