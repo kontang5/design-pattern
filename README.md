@@ -5,6 +5,8 @@ Based on *Java 17*.
 
 ## Table of Contents
 
+- [Iterator](docs/iterator.md)
+
 ## Project Structure
 
 ```text
