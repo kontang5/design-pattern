@@ -22,3 +22,14 @@
 
 ### Cons
 - **Increased complexity**: Require Extra classes and methods.
+
+---
+
+## Implementation
+
+![Iterator pattern](figures/iterator_impl.png)
+- `Book`: Represents an element in the collection. A Book has a `title` and provides access via `getTitle()`.
+- `BookShelf`: Acts as the aggregate. Stores a collection of `Book` objects and implements the `Iterable<Book>` interface. Provides methods `appendBook()`, `getBookAt()`, `getLength()`, and `iterator()`.
+- `BookShelfIterator`: Implements the `Iterator<Book>` interface and is responsible for traversing the `BookShelf`. Maintains an internal `index` to track iteration state and provides the methods `hasNext()` and `next()`.
+- `Iterable` / `Iterator`: Define the standard interfaces for creating and traversing iterators, ensuring separation of concerns between the aggregate `BookShelf` and the traversal mechanism `BookShelfIterator`.
+
