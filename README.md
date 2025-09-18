@@ -1,7 +1,15 @@
 # Design Pattern
 
-Implementation of *Design Pattern* in Java with description and class diagram.
+Implementation of *GoF Design Pattern* in Java with description and class diagram.
 Based on *Java 17*.
+
+## Introduction
+
+Design Pattern is a general solution to a commonly occurring problem in software design. It is based on Object-Oriented—encapsulation, inheritance, and polymorphism—with SOLID principles.
+
+> [!Note]
+> There is no silver bullet and **The Pattern** is not a *panacea*.  
+> Tailor the solution to the specific problem as possible.
 
 ## Table of Contents
 
@@ -57,12 +65,10 @@ Defines how classes are connected or interact in a system.
 - **Association**: Structural connection between classes.  
   `Student ———> Course`  
 - **Aggregation**: “whole-part” relationship where the part can exist independently of the whole.  
-  `Book ——–<> Library`
-- **Composition**: Strong “whole-part” relationship where the part’s lifecycle depends on the whole.  
-  `Room ———◆ House`
+  `Book ——–◆ Library`
 - **Dependency**: Temporary relationship where one class uses or depends on another.  
   `Car ---> Engine`
 - **Generalization**: Relationship where a class inherits fields and methods from a superclass (“is-a” relationship).  
-  `Dog ———|> Animal`
+  `Dog ———▶ Animal`
 - **Realization**: Relationship where a class implements an interface.  
-  `Car - - |> Drivable`
+  `Car - - ▶ Drivable`
