@@ -5,7 +5,7 @@ Based on *Java 17*.
 
 ## Introduction
 
-Design Pattern is a general solution to a commonly occurring problem in software design. It is based on Object-Oriented—encapsulation, inheritance, and polymorphism—with SOLID principles.
+**Design pattern** is a general solution to a commonly occurring problem in software design. It is based on Object-Oriented—encapsulation, inheritance, and polymorphism—with SOLID principles.
 
 > [!Note]
 > There is no silver bullet and **The Pattern** is not a *panacea*.  
@@ -33,21 +33,14 @@ design-pattern/
 
 ## Class Diagram
 
-Describes the system's classes, fields, methods, and the relationships between classes.
+**Class diagram** describes the system's classes, fields, methods, and the relationships between classes.
 
 ### Class
 
-Defines what it has—*fields* and what it can do—*methods*.
+**Class** defines what it has—*fields* and what it can do—*methods*.
 
 - Field: Defines the properties of the class
 - Method: Represents the behavior the class can perform.
-
-#### Types of Class
-
-- **Normal Class**: Standard class with fields and methods.
-- *Abstract Class*: Cannot be instantiated directly; meant to be subclassed.
-- *<<Interface\>\>*: Defines a contract that implementing classes must follow.
-- <<Enumeration\>\>: A set of named constants.
 
 #### Access Modifiers (Visibility)
 
@@ -60,15 +53,34 @@ Defines what it has—*fields* and what it can do—*methods*.
 
 ### Relationship
 
-Defines how classes are connected or interact in a system.
+**Relationship** defines how classes or instances are connected in a system.
 
-- **Association**: Structural connection between classes.  
-  `Student ———> Course`  
-- **Aggregation**: “whole-part” relationship where the part can exist independently of the whole.  
-  `Book ——–◆ Library`
-- **Dependency**: Temporary relationship where one class uses or depends on another.  
-  `Car ---> Engine`
-- **Generalization**: Relationship where a class inherits fields and methods from a superclass (“is-a” relationship).  
-  `Dog ———▶ Animal`
-- **Realization**: Relationship where a class implements an interface.  
-  `Car - - ▶ Drivable`
+#### Association
+
+Structural connection between classes.  
+`Car ———> Driver`
+
+#### Inheritance
+
+Subclass inherits fields and methods from superclass.  
+`Car ———▷ Vehicle`
+
+#### Implementation
+
+Class implements an interface.  
+`Car ----▷ Driveable`
+
+#### Dependency
+
+Temporary connection where one class depends on another.  
+`Car ----> Fuel`
+
+#### Aggregation
+
+'Whole-part' connection between classes where parts can exist independently.  
+`Car ———♢ Parkinglot`
+#### Composition
+
+'Whole-part' connection between classes where the class owns parts.  
+`Car ———♦ Engine`
+
