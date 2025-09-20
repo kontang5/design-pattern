@@ -21,8 +21,11 @@
 ## Implementation
 
 ![Iterator pattern](figures/iterator_impl.png)
-- `Book`: Represents an element in the collection. Each Book has a `title` and accessible via `getTitle()`.
-- `BookShelf`: Represents the aggregate. Stores `Book` objects and implements `Iterable<Book>`. It Provides methods `appendBook()`, `getBookAt()`, `getLength()`, and `iterator()`.
-- `BookShelfIterator`: Implements `Iterator<Book>` and is responsible for traversing the `BookShelf`. It Maintains an internal `index` to track iteration state and provides methods `hasNext()` and `next()`.
-- `Iterable` / `Iterator`: Define the standard interfaces for creating and traversing iterators, ensuring separation of concerns between the aggregate `BookShelf` and the traversal mechanism `BookShelfIterator`.
 
+| Element             | Role              | Description                                                                         |
+|---------------------|-------------------|-------------------------------------------------------------------------------------|
+| `Iterator<Book>`    | Iterator          | Defines an interface for traversing `Book` elements.                                |
+| `BookShelfIterator` | ConcreteIterator  | Implements `Iterator<Book>`; keeps track of the current index and bookshelf.        |
+| `Iterable<Book>`    | Aggregate         | Defines an interface for creating an iterator object.                               |
+| `BookShelf`         | ConcreteAggregate | Implements `Iterable<Book>`; stores a collection of books and creates iterators.    |
+| `Book`              | Data element      | Immutable data holder with a `title`; represents the actual element being iterated. |
