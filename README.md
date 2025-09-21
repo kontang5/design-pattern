@@ -13,6 +13,8 @@ Design Pattern is a general solution to a commonly occurring problem in software
 
 ## Table of Contents
 
+- [Iterator](docs/iterator.md)
+
 ## Project Structure
 
 ```text
