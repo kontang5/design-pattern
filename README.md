@@ -15,6 +15,7 @@ Design Pattern is a general solution to a commonly occurring problem in software
 
 - [Iterator](docs/iterator.md)
 - [Adapter](docs/adapter.md)
+- [Template Method](docs/template-method.md)
 
 ## Project Structure
 
